@@ -7,7 +7,6 @@ import torch
 class Convolution:
 
     def __init__(self):
-        super().__init__()
 
         # declare variable
         image_af_conv = []
@@ -110,15 +109,15 @@ class Convolution:
         first_starting_point = starting_point[0]
 
         # number of row repetition
-        for steps_row in range(0,cnt_row):
+        for steps_row in range(cnt_row):
             starting_row = steps_row * stride
 
             # number of col repetition
-            for steps_col in range(0, cnt_col):
+            for steps_col in range(cnt_col):
                 starting_col = steps_col * stride
 
                 # pooling done once , max_pool = result of pooling
-                for cnt_one_pool in range(0, pooling_size):
+                for cnt_one_pool in range(pooling_size):
                     pool = np.append(pool, pad_image_af_conv[first_starting_point[0] + cnt_one_pool+starting_row,
                                            first_starting_point[1]+starting_col:first_starting_point[1] +starting_col+ pooling_size])
 
