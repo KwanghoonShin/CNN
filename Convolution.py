@@ -2,6 +2,13 @@ import numpy as np
 import torch.nn as nn
 import torch
 
+"""
+The above code is the first CNN model code that I made from beginning to end. First, enter the row and column of the Input image, and then enter the size of the kernel. The padding of the input image is entered the same size as the kernel.
+
+The CNN structure is in the form of wx+b, and we defined it in conv2d. The result of convolution is in the form of a feature map, which is put into the activate function ReLu function. Finally, the final result is obtained through the pooling process.
+
+What needs to be improved through the above process is that the purpose of Padding is not to change the original size, but I forgot about it and wrote the code.
+"""
 
 class Convolution:
 
@@ -136,3 +143,5 @@ class Convolution:
 
 hello = Convolution()
 hello.model()
+
+
